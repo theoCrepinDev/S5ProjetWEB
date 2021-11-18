@@ -1,0 +1,63 @@
+/*  général */
+body{
+    margin: 0;
+}
+
+/* Header */
+header{
+    width: 60%;
+    height: 70px;
+    margin: 2% auto;
+}
+
+#logo_site{
+    float:left;
+    width: 15%;
+}
+
+.menu_navigation{
+    float: right;
+}
+
+.menu_navigation nav ol{
+    list-style: none;
+}
+
+.menu_navigation nav ol li{
+    display: inline-block;
+}
+
+.menu_navigation nav ol li a{
+    text-transform: uppercase;
+    color: grey;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0px 10px;
+}
+
+/*banière accueil*/
+#banniere
+{
+    height: 400px;
+    background: url('images/banière.jpg') center;
+}
+
+#bouton_baniere{
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: #37ABFF;
+    line-height: 40px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 180px;
+}
+
+#bouton_baniere:hover{
+    background-color: black;
+    color:orange;
+}
