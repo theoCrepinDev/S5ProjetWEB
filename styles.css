@@ -12,7 +12,7 @@ header{
 
 #logo_site{
     float:left;
-    width: 15%;
+    height: 100%;
 }
 
 .menu_navigation{
@@ -39,25 +39,128 @@ header{
 #banniere
 {
     height: 400px;
-    background: url('images/banière.jpg') center;
+    background: url('images/banière.png') center no-repeat;
+    background-size: cover;
 }
 
-#bouton_baniere{
+#bouton_baniere-gauche{
     text-decoration: none;
     color: white;
-    width: 100px;
+    width: auto;
+    padding: 0% 2%;
+    min-width: 140px;
     height: 40px;
     border-radius: 7px;
     background-color: #37ABFF;
+    margin-left:35%;
     line-height: 40px;
-    margin: 0 auto;
+    float: left;
     display: block;
     text-align: center;
     position: relative;
     top: 180px;
 }
 
-#bouton_baniere:hover{
+#bouton_baniere-gauche:hover{
     background-color: black;
     color:orange;
+}
+#bouton_baniere-droite{
+    text-decoration: none;
+    color: white;
+    width: auto;
+    padding: 0% 2%;
+    min-width: 140px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: #37ABFF;
+    margin-right:35%;
+    line-height: 40px;
+    float: right;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 180px;
+}
+
+#bouton_baniere-droite:hover{
+    background-color: black;
+    color:orange;
+}
+
+/*Page de trading*/
+#explications{
+    margin: auto 7%;
+}
+
+/*Page de minning*/
+td, th {
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+    background-color: beige
+}
+
+table{
+    margin:0 auto;
+    border: 2px solid black;
+    border-collapse: collapse;    
+}
+
+.col_1{
+    background-color: grey;
+    text-align: center;
+    padding: 20px;
+}
+
+.recette_col{
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 30px;
+    background-color: beige;
+}
+
+.prix_col{
+    text-align: right;
+    padding-left: 30px;
+    padding-right: 15px;
+    background-color: beige;
+}
+
+/*Page de présentation*/
+#presentation-equipe p{
+    height: 190px;
+}
+
+#presentation-equipe .boutton-linkdin{
+    text-decoration: none;
+    color: white;
+    min-width: 140px;
+    border-radius: 7px;
+    background-color: #37ABFF;
+    margin-bottom: 50px;
+    padding: 1% 2%;
+    text-align: center;
+    margin-left: 40%;
+}
+
+#presentation-equipe .boutton-linkdin:hover{
+    color: orange;
+    background-color: black;
+}
+
+#presentation-equipe .presentation-individuelle{
+    padding: 10px;
+    background-color: #E6E6E6;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    width: 25%;
+    margin-left: 5%;
+    float: left;
+    height: 300px;
+}
+
+#presentation-equipe .presentation-individuelle .photo-individuelle{
+    height: 150px;
+    float: right;
+    border-radius: 4px;
 }
