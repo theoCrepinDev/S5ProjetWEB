@@ -1,23 +1,27 @@
 /*  général */
 body{
     margin: 0;
+    display: flex;
+    flex-direction: column;
+
 }
+
+
 
 /* Header */
 header{
     width: 60%;
     height: 70px;
     margin: 2% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #logo_site{
-    float:left;
     height: 100%;
 }
 
-.menu_navigation{
-    float: right;
-}
 
 .menu_navigation nav ol{
     list-style: none;
@@ -41,9 +45,22 @@ header{
     height: 400px;
     background: url('images/banière.png') center no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+
 }
 
-#bouton_baniere-gauche{
+.titreBaniere{
+    text-align: center;
+    font-size: 2em;
+}
+.btnBaniere{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bouton_baniere{
     text-decoration: none;
     color: white;
     width: auto;
@@ -52,41 +69,95 @@ header{
     height: 40px;
     border-radius: 7px;
     background-color: #37ABFF;
-    margin-left:35%;
     line-height: 40px;
-    float: left;
-    display: block;
     text-align: center;
     position: relative;
     top: 180px;
+    transition: color 0.4s, background-color 0.4s;
 }
 
-#bouton_baniere-gauche:hover{
+.bouton_baniere:hover{
     background-color: black;
     color:orange;
 }
-#bouton_baniere-droite{
+
+/*Contenu page acceuil*/
+/* réglage de la largeur d'affichage de la page */
+#presentationSite{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.textPresentation h1{
+    text-align: center;
+}
+
+.contenu{
+    background-color: #D9FDFF;
+}
+
+.tradingMinnage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid #D9FDFF;
+    border-bottom: none;
+    border-top: none;
+}
+
+.textPresentationTrading{
+    width: 50%;
+    background-color: #FFF7F4;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.textPresentationMinnage{
+    width: 50%;
+    background-color: #FFF7F4;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.gifMinnage{
+    width: 50%;
+}
+.gifTrading{
+    width: 50%;
+}
+
+.videoPresentation{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boutonPresentation{
     text-decoration: none;
     color: white;
-    width: auto;
-    padding: 0% 2%;
+    padding: 1% 3%;
     min-width: 140px;
     height: 40px;
     border-radius: 7px;
     background-color: #37ABFF;
-    margin-right:35%;
     line-height: 40px;
-    float: right;
-    display: block;
     text-align: center;
-    position: relative;
-    top: 180px;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    transition: color 0.4s, background-color 0.4s;
 }
 
-#bouton_baniere-droite:hover{
+.boutonPresentation:hover{
     background-color: black;
     color:orange;
 }
+
+
 
 /*Page de trading*/
 #explications{
@@ -127,6 +198,11 @@ table{
 }
 
 /*Page de présentation*/
+.contenuContact h2{
+    text-align: center;
+    margin: 20px;
+}
+
 #presentation-equipe p{
     height: 190px;
 }
@@ -149,14 +225,21 @@ table{
 }
 
 #presentation-equipe .presentation-individuelle{
-    padding: 10px;
-    background-color: #E6E6E6;
-    border: 1px solid #E6E6E6;
-    border-radius: 4px;
-    width: 25%;
-    margin-left: 5%;
-    float: left;
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#presentation-equipe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+    flex-wrap: wrap;
+}
+
+#presentation-equipe .presentation-individuelle{
+    width: 20%;
+    min-width: 310px;
+    margin-top: 40px;
 }
 
 #presentation-equipe .presentation-individuelle .photo-individuelle{

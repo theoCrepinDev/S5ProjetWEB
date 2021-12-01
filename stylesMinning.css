@@ -1,0 +1,129 @@
+
+/*  général */
+body{
+    margin: 0;
+    background-color: lightyellow;
+}
+
+/* Header */
+header{
+    width: 60%;
+    height: 70px;
+    margin: 2% auto;
+}
+
+#logo_site{
+    float:left;
+    height: 100%;
+}
+
+.menu_navigation{
+    float: right;
+}
+
+.menu_navigation nav ol{
+    list-style: none;
+}
+
+.menu_navigation nav ol li{
+    display: inline-block;
+}
+
+.menu_navigation nav ol li a{
+    text-transform: uppercase;
+    color: grey;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0px 10px;
+}
+/* En dessous de la banière */
+
+h1{
+    font-family: 'Bitter', serif;
+    text-align: center;
+    border: 3px solid darkorange;
+    background-color: orange;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px orange;
+    margin: 3% 20% 5% 20%;
+    color: black;
+    cursor: pointer;
+    margin-top: 8%;
+  
+}
+h1:hover{
+    color:orange;
+    background-color: black;
+    border: 3px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+h2{
+    font-family: 'Bitter', serif;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+form{
+    border: 3px solid black;
+    background-color:gray;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+}
+/* bouton*/
+
+button{
+    display: inline-block;
+    color: black;
+    background-color: orange;
+    border:none ;
+}
+button:hover{
+    background-color: black;
+    color: orange;
+}
+
+/*bas de page de minnning*/
+
+footer{
+    margin-top: 20%;
+}
+
+/*Page de minning*/
+td, th {
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+    background-color: beige
+}
+
+table{
+    margin:0 auto;
+    border: 2px solid black;
+    border-collapse: collapse;    
+}
+
+.col_1{
+    background-color: grey;
+    text-align: center;
+    padding: 20px;
+}
+
+.recette_col{
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 30px;
+    background-color: beige;
+}
+
+.prix_col{
+    text-align: right;
+    padding-left: 30px;
+    padding-right: 15px;
+    background-color: beige;
+}

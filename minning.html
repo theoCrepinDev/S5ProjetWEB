@@ -3,7 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>Site projet</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="stylesMinning.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bitter&family=EB+Garamond:wght@500&family=Source+Serif+Pro:wght@300&display=swap');
+        </style>
     </head>
     <body>
         <header>
@@ -11,21 +14,29 @@
             <div class="menu_navigation">
                 <nav>
                     <ol>
-                        <li><a href="accueil.html">Acceuil</a></li>
+                        <li><a href="accueil.html">Accueil</a></li>
                         <li><a href="trading.html">Trading</a></li>
-                        <li><a href="#">Minning</a></li>
+                        <li><a href="minning.html">Minning</a></li>
                         <li><a href="contact.html">Contact/A propos</a></li>
                     </ol>
                 </nav>
             </div>
+            
         </header>
-
+        <h1> Le minage du Bitcoin </h1>
+        <div class="informations_minning">
+            <h2> Ce qu'il faut savoir sur le minning : </h2>
+            <p align="center"> À compléter</p>
+            
+        </div>
         <div class="table_minning" >
+            <h2> Les différents processeur permettant le minage : </h2>
             <table >
                 <tr>
-                    <th class="col_1"></th>
-                    <th>GPU</th>
+                    <td class="col_1"><strong> Processeur </strong> </td>
                     <th>Puissance</th>
+                    <th>GPU</th>
+                    
                 </tr>
                 <tbody>
                     <tr>
@@ -58,5 +69,29 @@
                 </tbody>
             </table>
         </div>
+        <h2> Ajouter des nouvelles informations : </h2>
+        <form >
+            <div>
+                <label for="processeur"><strong> Processeur : </strong>  </label>
+                <input type="text" id="processeur" name="leprocesseur" placeholder="Nouveau processeur" size="50" required>
+            </div>
+            <div>
+                <label for="puissance"><strong> Puissance : </strong></label>
+                <input type="text" id="puissance" name="sapuissance" placeholder="Sa puissance" size="50" required>
+            </div>
+            <div>
+                <label for="gpu"><strong> GPU : </strong></label>
+                <input type="text" id="gpu" name="songpu" placeholder="Son GPU" size="50" required>
+            </div>
+            <div>
+                <button type="submit"> Ajouter </button>
+                <button type="reset"> Supprimer </button>
+            </div>
+        </form>
+        
+
+        <footer>
+            <p> Projet web actualisé le 1/12/2021;</p>
+        </footer>
     </body>
 </html>
