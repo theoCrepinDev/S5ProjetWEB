@@ -1,0 +1,140 @@
+ /*  général */
+body{
+    margin: 0;
+    
+}
+
+
+    
+
+/* Header */
+header{
+    width: 60%;
+    height: 70px;
+    margin: 2% auto;
+}
+
+#logo_site{
+    float:left;
+    height: 100%;
+}
+
+.menu_navigation{
+    float: center;
+   
+    
+    
+}
+
+.menu_navigation nav ol{
+    list-style: none;
+     
+}
+
+.menu_navigation nav ol li{
+    display: inline-block;
+    margin-top: 10%;
+    margin-left:70 px;
+}
+
+
+.menu_navigation nav ol li a{
+    text-transform: uppercase;
+    color:rgb(255,182,41);
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0px 10px;
+}
+
+.banniereacc
+{
+    background: url(images/tradingban11.jpg);
+    background-size:cover;
+    width: 100%;
+    height:200px;
+}
+.intro{
+    color:grey;
+    font-family:fantasy;
+    
+}
+
+.explication{
+    font-family: fantasy;
+    color:grey;
+}
+#bouton_BTC{
+    text-decoration: none;
+    color: white;
+    width: auto;
+    padding: 0% 2%;
+    min-width: 140px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: darkgrey;
+    float: left;
+    display: block;
+    position: relative;
+    font-family:fantasy;
+}
+#bouton_BTC:hover{
+    background-color: black;
+    color:green;
+}
+#bouton_SOL{
+    text-decoration: none;
+    color: white;
+    width: auto;
+    padding: 0% 2%;
+    min-width: 140px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: darkgrey;
+    float: left;
+    display: block;
+    position: relative;
+    font-family:fantasy;
+}
+#bouton_SOL:hover{
+    background-color: black;
+    color:green;
+}
+#bouton_AVAX{
+    text-decoration: none;
+    color: white;
+    width: auto;
+    padding: 0% 2%;
+    min-width: 140px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: darkgrey;
+    float: left;
+    display: block;
+    position: relative;
+    font-family:fantasy;
+}
+#bouton_AVAX:hover{
+    background-color: black;
+    color:green;
+}
+#bouton_ETH{
+    text-decoration: none;
+    color: white;
+    width: auto;
+    padding: 0% 2%;
+    min-width: 140px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: darkgrey;
+    float: left;
+    display: block;
+    position: relative;
+    font-family:fantasy;
+}
+#bouton_ETH:hover{
+    background-color: black;
+    color:green;
+}
+.section{
+    font-family: fantasy;
+}
