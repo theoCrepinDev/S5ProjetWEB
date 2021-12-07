@@ -10,14 +10,21 @@
         <header>
             <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris" ></a>
             <div class="menu_navigation">
-                <nav>
+                <nav class="menuNavigation">
                     <ol>
                         <!--Ligne supplémentaire--> 
                         <li><a href="#">Acceuil</a></li>
-                        <li><a href="trading.html">Trading</a></li>
+                        <li class="menuDeroulant">
+                            <a href="trading.html">Trading</a>
+                            <ul class="sousMenu">
+                                <a href="trading.html">Trading 1</a>
+                                <a href="trading1.html">Trading 2</a>
+                            </ul>   
+                        </li>
                         <li><a href="minning.html">Minning</a></li>
                         <li><a href="contact.html">Contact/A propos</a></li>
                     </ol>
+                    
                 </nav>
             </div>
             <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>

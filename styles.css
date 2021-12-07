@@ -9,6 +9,10 @@ body{
 
 
 /* Header */
+:root{
+    --hauteurMenu : 70px;
+}
+
 header{
     width: 60%;
     height: 70px;
@@ -27,8 +31,16 @@ header{
     list-style: none;
 }
 
+.menuNavigation{
+    position: sticky;
+    top: 0;
+}
+
 .menu_navigation nav ol li{
     display: inline-block;
+    position: relative;
+    height: 100%;
+
 }
 
 .menu_navigation nav ol li a{
@@ -37,6 +49,7 @@ header{
     text-decoration: none;
     font-size: 1.5em;
     margin: 0px 10px;
+        
 }
 
 #btnColorChange{
@@ -50,6 +63,21 @@ header{
 
 #iconeColorMode{
     height: 20px;
+}
+
+.menuDeroulant{
+    display: inline-block;
+}
+
+.sousMenu{
+    background-color:#FFF7F4 ;
+    width: 100%;
+    text-align: left;
+    display: grid;
+    margin-top: var(--hauteurMenu);
+    overflow: hidden;
+    max-height: 0;
+
 }
 
 /*banière accueil*/
@@ -214,52 +242,8 @@ table{
 }
 
 /*Page de présentation*/
-.contenuContact h2{
-    text-align: center;
-    margin: 20px;
-}
-
-#presentation-equipe p{
-    height: 190px;
-}
-
-#presentation-equipe .boutton-linkdin{
-    text-decoration: none;
-    color: white;
-    min-width: 140px;
-    border-radius: 7px;
-    background-color: #37ABFF;
-    margin-bottom: 50px;
-    padding: 1% 2%;
-    text-align: center;
-    margin-left: 40%;
-}
-
-#presentation-equipe .boutton-linkdin:hover{
-    color: orange;
-    background-color: black;
-}
-
-#presentation-equipe .presentation-individuelle{
-    display: flex;
-    flex-direction: column;
-}
-
 #presentation-equipe{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;    
-    flex-wrap: wrap;
-}
-
-#presentation-equipe .presentation-individuelle{
-    width: 20%;
-    min-width: 310px;
-    margin-top: 40px;
-}
-
-#presentation-equipe .presentation-individuelle .photo-individuelle{
-    height: 150px;
-    float: right;
-    border-radius: 4px;
+    justify-content: space-around;
 }
