@@ -38,7 +38,7 @@
                     <th>GPU</th>
                     
                 </tr>
-                <tbody>
+                <tbody class="bodyTableau">
                     <tr>
                         <td rowspan="2" class="col_1">AMD</td>
                         <td class="recette_col">Radeon VII</td>
@@ -70,18 +70,18 @@
             </table>
         </div>
         <h2> Ajouter des nouvelles informations : </h2>
-        <form >
+        <form name ="commande">
             <div>
                 <label for="processeur"><strong> Processeur : </strong>  </label>
-                <input type="text" id="processeur" name="leprocesseur" placeholder="Nouveau processeur" size="50" required>
+                <input type="text" id="processeur" name="processeur" placeholder="Nouveau processeur" size="50" required>
             </div>
             <div>
                 <label for="puissance"><strong> Puissance : </strong></label>
-                <input type="text" id="puissance" name="sapuissance" placeholder="Sa puissance" size="50" required>
+                <input type="text" id="puissance" name="puissance" placeholder="Sa puissance" size="50" required>
             </div>
             <div>
                 <label for="gpu"><strong> GPU : </strong></label>
-                <input type="text" id="gpu" name="songpu" placeholder="Son GPU" size="50" required>
+                <input type="text" id="gpu" name="gpu" placeholder="Son GPU" size="50" required>
             </div>
             <div>
                 <button type="submit"> Ajouter </button>
@@ -95,3 +95,45 @@
         </footer>
     </body>
 </html>
+
+<script>
+    console.log();
+    
+            var commandeForm = document.forms[0];
+
+            function ajouter(){
+                console.log(commandeForm.processeur.value);
+                console.log(commandeForm.puissance.value);
+                console.log(commandeForm.gpu.value);
+
+                //on créé un nouvel élément
+                var newLine = document.createElement("tr");
+                var newVal1 = document.createElement("td");
+                var newVal2 = document.createElement("td");
+                var newVal3 = document.createElement("td");
+
+                newVal1.textContent = commandeForm.processeur.value;
+                newVal2.textContent = commandeForm.puissance.value;
+                newVal3.textContent = commandeForm.gpu.value;
+
+                newLine.append(newVal1);
+                newLine.append(newVal2);
+                newLine.append(newVal3);
+
+
+                var bodyTableau = document.querySelector(".bodyTableau");
+                bodyTableau.appendChild(newLine);
+
+            }
+
+
+            const PROCESSEUR_REQUIERED = "veuillez entrer le bon processeur !";
+            const PUISSANCE_REQUIERED = "veuillez entrer une puissance Valide !";
+            const GPU_REQUIERED   = "veuillez entrer un gpu existant";
+
+
+          commandeForm.addEventListener("submit", function (event){
+            event.preventDefault();
+            ajouter();
+});
+</script>

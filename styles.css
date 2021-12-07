@@ -3,7 +3,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
-
+    transition: background-color 0.4s;
 }
 
 
@@ -37,6 +37,19 @@ header{
     text-decoration: none;
     font-size: 1.5em;
     margin: 0px 10px;
+}
+
+#btnColorChange{
+    border: none;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    background-color: white;
+    border-radius: 400px;
+}
+
+#iconeColorMode{
+    height: 20px;
 }
 
 /*banière accueil*/
@@ -110,6 +123,7 @@ header{
 .textPresentationTrading{
     width: 50%;
     background-color: #FFF7F4;
+    border: none;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -121,9 +135,11 @@ header{
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+
 }
 .gifMinnage{
     width: 50%;
+    
 }
 .gifTrading{
     width: 50%;

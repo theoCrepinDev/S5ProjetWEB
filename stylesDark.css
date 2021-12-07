@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+
+.menu_navigation nav ol li a{
+    color: white;
+}
+p{
+    color: #D0CFCF;
+}
+h1{
+    color: #D0CFCF;
+}
+h2{
+    color: #D0CFCF;
+}
+h3{
+    color: #D0CFCF;
+}
+.contenu{
+    background-color: #1D1D1D;
+}
+
+.textPresentationTrading{
+    background-color: #7F7F7F;
+}
+
+.textPresentationMinnage{
+    background-color: #7F7F7F;
+}
+
+#presentationSite{
+    background-color: #4B4B4B;
+
+}
