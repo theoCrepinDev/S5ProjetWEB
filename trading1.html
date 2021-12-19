@@ -2,8 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Site projet</title>
-        <link rel="stylesheet" href="stylestrading.css"&>
+        <title>CryptoGood</title>
         <link rel="stylesheet" href="styles.css" >
         <link id="stylesDark" rel="stylesheet" href="">
     </head>
@@ -36,22 +35,35 @@
             </div>
             <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>
         </header>
-
-        <section id="explications" class='section'>
-            <h1 class="intro">Une bref introduction à la notion de trading:</h1>
-            <p> Le but du trading est d'acheter ou vendre des actions.
-                Ici les actions prises en comptes sont les cryptomonnaies.
-            </p>
-            <h2 class='explication'>Analyse graphiques:</h2>
-            <p>Cette page montre un apperçu de plusieurs cours de cryptos</p>
-            <h3 class='Boutons'>
-            <p><a  id="bouton_BTC" href="images/BTC.png">Cours actuel du Bitcoin</a></p>
-            <p><a  id="bouton_SOL" href="images/SOL.png">Cours actuel du Solana</a></p>
-           <p> <a  id="bouton_AVAX" href="images/AVAX.png">Cours actuel de L'Avax</a></p>
-            <p><a  id="bouton_ETH" href="images/ETh.png">Cours actuel de l'ETH</a></p>
-            </h3>
+        <div class="contenu">
+            <div id="album-table">
+                <h2 class="titre">Album</h2>
+        
+                <table id="albumTable">
+                    <thead>
+                        <tr>
+                            <th>PhotoId</th>
+                            <th>Id</th>
+                            <th>Titre</th>
+                            <th>URL1</th>
+                            <th>URL2</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody class="albumTableBody">
+        
+        
+                    </tbody>
+                </table>
+        
+                <nav class="precedentSuivant">
+                    <button class="prev" id="previousButton" type="button" onclick="getPreviousPage()">Page Précédent</button>
+                    <p id="nombrePages"></p>
+                    <button class="suiv" id="nextButton" type="butotn" onclick="getNextPage()">Page Suivante</button>
+                </nav>
+            </div>
+        </div>        
     
-        </section>
+        <script src="jsAccueil.js"></script>
     </body>
-    <script src="jsAccueil.js"></script>
 </html>

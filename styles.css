@@ -9,6 +9,10 @@ body{
 
 
 /* Header */
+:root{
+    --hauteurMenu : 70px;
+}
+
 header{
     width: 60%;
     height: 70px;
@@ -22,22 +26,84 @@ header{
     height: 100%;
 }
 
-
-.menu_navigation nav ol{
-    list-style: none;
+.menu_navigation{
+    width: 80%;
 }
 
-.menu_navigation nav ol li{
+:root{
+    --hauteurMenu : 80px;
+}
+
+.menuNavigation{
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.menuNavigation > ol {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    list-style-type: none;
+    
+}
+
+.menuNavigation > ol > li{
+    position: relative;
+    flex:1;
+}
+
+
+.sousMenu{
+    flex-direction: column;
+    padding: 0;
+    background-color: beige;
+    border-radius: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height: 0px;
+    transition: padding 0.6s, height 0.4s;
+
+    
+}
+
+.sousMenu > a{
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+
+.menuDeroulant p{
+    display: inline-block;
+    transition: transform 0.4s;
+    height: fit-content;
+
+}
+.nonDeroulant p {
     display: inline-block;
 }
 
-.menu_navigation nav ol li a{
-    text-transform: uppercase;
-    color: grey;
-    text-decoration: none;
-    font-size: 1.5em;
-    margin: 0px 10px;
+.menuDeroulant:hover p{
+    transform: rotate(90deg);
 }
+
+.menuDeroulant:hover > .sousMenu{
+    display: flex;
+    opacity: 1;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.menuDeroulant:hover  > .sousMenu >a{
+    opacity: 1;
+}
+
+
+
 
 #btnColorChange{
     border: none;
@@ -50,6 +116,20 @@ header{
 
 #iconeColorMode{
     height: 20px;
+}
+
+.menu_navigation > .menuNavigation > ol > li > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: large;
+}
+
+.sousMenu > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    
 }
 
 /*banière accueil*/
@@ -180,6 +260,37 @@ header{
     margin: auto 7%;
 }
 
+
+/*Page trading 2*/
+albumTable {
+
+    border-collapse: collapse; /* pour que toutes les cellules aient une seule bordure*/
+    border: 2px solid rgb(233, 27, 27);
+    margin:auto;
+            
+   }
+
+albumTable td,albumTable th {
+     
+     border: 1px solid rgb(12, 1, 1);
+     padding: 10px 20px;
+     text-align: center;
+   }
+
+ 
+.titre{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.precedentSuivant{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
 /*Page de minning*/
 td, th {
     border-bottom: 1px solid #333;
@@ -214,52 +325,42 @@ table{
 }
 
 /*Page de présentation*/
-.contenuContact h2{
-    text-align: center;
-    margin: 20px;
-}
-
-#presentation-equipe p{
-    height: 190px;
-}
-
-#presentation-equipe .boutton-linkdin{
-    text-decoration: none;
-    color: white;
-    min-width: 140px;
-    border-radius: 7px;
-    background-color: #37ABFF;
-    margin-bottom: 50px;
-    padding: 1% 2%;
-    text-align: center;
-    margin-left: 40%;
-}
-
-#presentation-equipe .boutton-linkdin:hover{
-    color: orange;
-    background-color: black;
-}
-
-#presentation-equipe .presentation-individuelle{
-    display: flex;
-    flex-direction: column;
-}
-
 #presentation-equipe{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;    
+    justify-content: space-around;
+}
+
+.presentation-individuelle{
+    width: 30%;
+    height: 550px;
+    border: solid black 1px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.presentation section img{
+    width: 150px;
+}
+.presentation-individuelle > .presentation{
+    display: flex;
     flex-wrap: wrap;
+
 }
 
-#presentation-equipe .presentation-individuelle{
-    width: 20%;
-    min-width: 310px;
-    margin-top: 40px;
+.presentationNom{
+    width: 50%;
 }
 
-#presentation-equipe .presentation-individuelle .photo-individuelle{
-    height: 150px;
-    float: right;
-    border-radius: 4px;
+.btnLinkdin{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
+.boutton-linkdin{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
