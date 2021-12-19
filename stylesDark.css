@@ -33,3 +33,16 @@ h3{
     background-color: #4B4B4B;
 
 }
+
+.menu_navigation > .menuNavigation > ol > li > a{
+    color: white;
+}
+
+.sousMenu{
+    background-color: #4B4B4B;
+}
+
+.presentation-individuelle{
+    border: solid white 1px;
+    background-color: #363434;
+}

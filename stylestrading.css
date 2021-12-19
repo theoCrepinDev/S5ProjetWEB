@@ -7,44 +7,6 @@ body{
 
     
 
-/* Header */
-header{
-    width: 60%;
-    height: 70px;
-    margin: 2% auto;
-}
-
-#logo_site{
-    float:left;
-    height: 100%;
-}
-
-.menu_navigation{
-    float: center;
-   
-    
-    
-}
-
-.menu_navigation nav ol{
-    list-style: none;
-     
-}
-
-.menu_navigation nav ol li{
-    display: inline-block;
-    margin-top: 10%;
-    margin-left:70 px;
-}
-
-
-.menu_navigation nav ol li a{
-    text-transform: uppercase;
-    color:rgb(255,182,41);
-    text-decoration: none;
-    font-size: 1.5em;
-    margin: 0px 10px;
-}
 
 .banniereacc
 {

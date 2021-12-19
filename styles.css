@@ -26,31 +26,84 @@ header{
     height: 100%;
 }
 
+.menu_navigation{
+    width: 80%;
+}
 
-.menu_navigation nav ol{
-    list-style: none;
+:root{
+    --hauteurMenu : 80px;
 }
 
 .menuNavigation{
     position: sticky;
     top: 0;
+    width: 100%;
 }
 
-.menu_navigation nav ol li{
-    display: inline-block;
+.menuNavigation > ol {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    list-style-type: none;
+    
+}
+
+.menuNavigation > ol > li{
     position: relative;
-    height: 100%;
-
+    flex:1;
 }
 
-.menu_navigation nav ol li a{
-    text-transform: uppercase;
-    color: grey;
-    text-decoration: none;
-    font-size: 1.5em;
-    margin: 0px 10px;
-        
+
+.sousMenu{
+    flex-direction: column;
+    padding: 0;
+    background-color: beige;
+    border-radius: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height: 0px;
+    transition: padding 0.6s, height 0.4s;
+
+    
 }
+
+.sousMenu > a{
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+
+.menuDeroulant p{
+    display: inline-block;
+    transition: transform 0.4s;
+    height: fit-content;
+
+}
+.nonDeroulant p {
+    display: inline-block;
+}
+
+.menuDeroulant:hover p{
+    transform: rotate(90deg);
+}
+
+.menuDeroulant:hover > .sousMenu{
+    display: flex;
+    opacity: 1;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.menuDeroulant:hover  > .sousMenu >a{
+    opacity: 1;
+}
+
+
+
 
 #btnColorChange{
     border: none;
@@ -65,19 +118,18 @@ header{
     height: 20px;
 }
 
-.menuDeroulant{
-    display: inline-block;
+.menu_navigation > .menuNavigation > ol > li > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: large;
 }
 
-.sousMenu{
-    background-color:#FFF7F4 ;
-    width: 100%;
-    text-align: left;
-    display: grid;
-    margin-top: var(--hauteurMenu);
-    overflow: hidden;
-    max-height: 0;
-
+.sousMenu > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    
 }
 
 /*banière accueil*/
@@ -208,6 +260,37 @@ header{
     margin: auto 7%;
 }
 
+
+/*Page trading 2*/
+albumTable {
+
+    border-collapse: collapse; /* pour que toutes les cellules aient une seule bordure*/
+    border: 2px solid rgb(233, 27, 27);
+    margin:auto;
+            
+   }
+
+albumTable td,albumTable th {
+     
+     border: 1px solid rgb(12, 1, 1);
+     padding: 10px 20px;
+     text-align: center;
+   }
+
+ 
+.titre{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.precedentSuivant{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
 /*Page de minning*/
 td, th {
     border-bottom: 1px solid #333;
@@ -247,3 +330,37 @@ table{
     flex-direction: row;
     justify-content: space-around;
 }
+
+.presentation-individuelle{
+    width: 30%;
+    height: 550px;
+    border: solid black 1px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.presentation section img{
+    width: 150px;
+}
+.presentation-individuelle > .presentation{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.presentationNom{
+    width: 50%;
+}
+
+.btnLinkdin{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.boutton-linkdin{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+

@@ -4,23 +4,37 @@
         <meta charset="utf-8">
         <title>Site projet</title>
         <link rel="stylesheet" href="styles.css">
+        <link id="stylesDark" rel="stylesheet" href="">
     </head>
     <body>
         <div class="header">
             <header>
-                <div class="logo">
-                    <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris"></a>
-                </div>
+                <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris" ></a>
                 <div class="menu_navigation">
-                    <nav>
+                    <nav class="menuNavigation">
                         <ol>
-                            <li><a href="accueil.html">Acceuil</a></li>
-                            <li><a href="trading.html">Trading</a></li>
-                            <li><a href="minning.html">Minning</a></li>
-                            <li><a href="#">Contact/A propos</a></li>
+                            <!--Ligne supplémentaire--> 
+                            <li class="nonDeroulant"><a href="accueil.html">Acceuil <p> </p></a></li>
+                            <li class="menuDeroulant">
+                                <a href="trading.html">Trading <p> ></p></a>
+                                <ul class="sousMenu">
+                                    <a href="trading.html">Trading 1</a>
+                                    <a href="trading1.html">Trading 2</a>
+                                </ul>   
+                            </li>
+                            <li class="menuDeroulant">
+                                <a href="minning.html" >Minning <p> ></p></a>
+                                <ul class="sousMenu">
+                                    <a href="minning.html">Minning 1</a>
+                                    <a href="minning2.html">Minning 2</a>
+                                </ul>  
+                            </li>
+                            <li class="nonDeroulant"><a href="contact.html">Contact/A propos <p> </p></a></li>
                         </ol>
+                        
                     </nav>
                 </div>
+                <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>
             </header>
         </div>
   
@@ -28,7 +42,7 @@
             <section id="presentation-equipe">
                 <section id="presentation-toufik" class="presentation-individuelle">
                     <div class="presentation">
-                        <section>
+                        <section class="presentationNom">
                             <h2 class="prenomNom">Toufik PHILIPPE</h2>
                         </section>
                         <section>
@@ -40,14 +54,14 @@
                         </section>
                     </div>
                     <div class="btnLinkdin">
-                        <a href="https://www.linkedin.com/in/toufik-philippe-644bb3221/" class="boutton-linkdin" target="_blank"> LinkDin </a>
+                        <a href="https://www.linkedin.com/in/toufik-philippe-644bb3221/" class="boutton-linkdin boutonPresentation" target="_blank"> LinkDin </a>
                     </div>
                     
                 </section>
                 <section id="presentation-anthony" class="presentation-individuelle">
                     
                     <div class="presentation">
-                        <section>
+                        <section class="presentationNom">
                             <h2>Anthony GUERIMAND</h2>
                         </section>
                         <section>
@@ -58,12 +72,12 @@
                         </section>
                     </div>
                     <div class="btnLinkdin">
-                        <a href="https://www.linkedin.com/in/anthony-guerimand-182354222/" class="boutton-linkdin" target="_blank"> LinkDin </a>
+                        <a href="https://www.linkedin.com/in/anthony-guerimand-182354222/" class="boutton-linkdin boutonPresentation" target="_blank"> LinkDin </a>
                     </div>                    
                 </section>
                 <section id="presentation-theo" class="presentation-individuelle">
                     <div class="presentation">
-                    <section>
+                    <section class="presentationNom">
                         <h2>Théo CREPIN</h2>
                     </section>
                     <section>
@@ -76,12 +90,12 @@
                     
                     </div>
                     <div class="btnLinkdin">
-                        <a href="https://www.linkedin.com/in/th%C3%A9o-cr%C3%A9pin-05163b216/" class="boutton-linkdin" target="_blank">  LinkDin </a>
+                        <a href="https://www.linkedin.com/in/th%C3%A9o-cr%C3%A9pin-05163b216/" class="boutton-linkdin boutonPresentation" target="_blank">  LinkDin </a>
                     </div>
                 </section>
             </section>
         </div>
 
-    
+        <script src="jsAccueil.js"></script>
     </body>
 </html>

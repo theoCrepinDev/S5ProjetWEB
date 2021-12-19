@@ -5,37 +5,7 @@ body{
     background-color: lightyellow;
 }
 
-/* Header */
-header{
-    width: 60%;
-    height: 70px;
-    margin: 2% auto;
-}
 
-#logo_site{
-    float:left;
-    height: 100%;
-}
-
-.menu_navigation{
-    float: right;
-}
-
-.menu_navigation nav ol{
-    list-style: none;
-}
-
-.menu_navigation nav ol li{
-    display: inline-block;
-}
-
-.menu_navigation nav ol li a{
-    text-transform: uppercase;
-    color: grey;
-    text-decoration: none;
-    font-size: 1.5em;
-    margin: 0px 10px;
-}
 /* En dessous de la banière */
 
 h1{
