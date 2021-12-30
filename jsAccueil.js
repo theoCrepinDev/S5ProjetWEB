@@ -151,3 +151,48 @@ function showPreviousPage(){
         elementNextButton.style.display = 'none';
     }
 }
+
+function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+//js pour ajout d'informations dans le tableau de la page manning
+var commandeForm = document.forms[0];
+
+function ajouter(){
+
+    //on créé un nouvel élément
+    var newLine = document.createElement("tr");
+    var newVal2 = document.createElement("td");
+    var newVal3 = document.createElement("td");
+
+    var typeFamille = commandeForm.processeur.value;
+    newVal2.textContent = commandeForm.gpu.value;
+    newVal3.textContent = commandeForm.puissance.value + ' MH/s';
+    newVal2.classList = 'recette_col';
+    newVal3.classList = 'prix_col';
+
+    newLine.append(newVal2);
+    newLine.append(newVal3);
+
+    if(typeFamille === "amd"){
+        var tagAfter = document.getElementById('familleNvidia');
+        var rowSpan = document.getElementById('colAmd');
+        rowSpan.rowSpan++;
+    }else{
+        var tagAfter = document.getElementById('familleFin');
+        var rowSpan = document.getElementById('colNvidia');
+        rowSpan.rowSpan++;
+    }
+    
+    var tbody       =      document.getElementById('bodyTableau');
+    tbody.insertBefore(newLine, tagAfter);
+
+}
+
+
+const PROCESSEUR_REQUIERED = "veuillez entrer le bon processeur !";
+const PUISSANCE_REQUIERED = "veuillez entrer une puissance Valide !";
+const GPU_REQUIERED   = "veuillez entrer un gpu existant";
+
+

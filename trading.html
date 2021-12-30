@@ -14,7 +14,7 @@
                 <nav class="menuNavigation">
                     <ol>
                         <!--Ligne supplémentaire--> 
-                        <li class="nonDeroulant"><a href="accueil.html">Acceuil <p> </p></a></li>
+                        <li class="nonDeroulant"><a href="accueil.html">Accueil <p> </p></a></li>
                         <li class="menuDeroulant">
                             <a href="trading.html">Trading <p> ></p></a>
                             <ul class="sousMenu">
@@ -29,7 +29,7 @@
                                 <a href="minning2.html">Minning 2</a>
                             </ul>  
                         </li>
-                        <li class="nonDeroulant"><a href="contact.html">Contact/A propos <p> </p></a></li>
+                        <li class="nonDeroulant"><a href="contact.html">A propos <p> </p></a></li>
                     </ol>
                     
                 </nav>
@@ -44,14 +44,21 @@
             </p>
             <h2 class='explication'>Analyse graphiques:</h2>
             <p>Cette page montre un apperçu de plusieurs cours de cryptos</p>
-            <h3 class='Boutons'>
-            <p><a  id="bouton_BTC" href="images/BTC.png">Cours actuel du Bitcoin</a></p>
-            <p><a  id="bouton_SOL" href="images/SOL.png">Cours actuel du Solana</a></p>
-           <p> <a  id="bouton_AVAX" href="images/AVAX.png">Cours actuel de L'Avax</a></p>
-            <p><a  id="bouton_ETH" href="images/ETh.png">Cours actuel de l'ETH</a></p>
-            </h3>
+            <div class="listeGraphiques">
+                <p><a  id="bouton_BTC" class="boutonPresentation" href="images/BTC.png">Cours actuel du Bitcoin</a></p>
+                <p><a  id="bouton_SOL" class="boutonPresentation" href="images/SOL.png">Cours actuel du Solana</a></p>
+                <p><a  id="bouton_AVAX" class="boutonPresentation" href="images/AVAX.png">Cours actuel de L'Avax</a></p>
+                <p><a  id="bouton_ETH" class="boutonPresentation" href="images/ETh.png">Cours actuel de l'ETH</a></p>
+            </div>
+            <p>Ces courbes permettent de suivre en temps réel l'évolution des prix des différentes cryptomonnaies disponnibles</p>
+            
     
         </section>
     </body>
+    <footer>
+        <div class="footer">
+            <a class="lienAPropos boutonPresentation" href="contact.html" >Page à propos de l'équipe</a>
+        </div>
+    </footer>
     <script src="jsAccueil.js"></script>
 </html>

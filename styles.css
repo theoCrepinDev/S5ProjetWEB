@@ -4,6 +4,26 @@ body{
     display: flex;
     flex-direction: column;
     transition: background-color 0.4s;
+    
+}
+
+/* Footer */
+.footer{
+    height: 15vh;
+    background-color: bisque;
+    position: relative;    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.lienAPropos{
+text-decoration: none;
+width: fit-content;
+position: relative;
+left: 50px;
+top: 25px;
 }
 
 
@@ -260,6 +280,19 @@ header{
     margin: auto 7%;
 }
 
+.listeGraphiques{
+    display: flex;
+    flex-direction: column;
+}
+
+.listeGraphiques > p{
+    padding-left: 30%;
+}
+
+.listeGraphiques > p > a{
+    width: fit-content;
+}
+
 
 /*Page trading 2*/
 albumTable {
@@ -291,7 +324,21 @@ albumTable td,albumTable th {
     margin-top: 10px;
 }
 
+.nextPreviousButton{
+    margin: 0 100px;
+}
+
+#nombrePages{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*Page de minning*/
+
+.contenuMinning{
+    width: 80%;
+    margin: auto auto;;
+}
 td, th {
     border-bottom: 1px solid #333;
     border-right: 1px solid #333;
@@ -324,6 +371,24 @@ table{
     background-color: beige;
 }
 
+.formFields{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formFields > div{
+    margin: 0 30px;
+}
+
+.formButtons{
+    width: fit-content;
+    margin: 40px auto;
+}
+
+.formButtons > .formButton{
+    border: none;
+}
 /*Page de présentation*/
 #presentation-equipe{
     display: flex;
@@ -364,3 +429,8 @@ table{
     padding-right: 20px;
 }
 
+.presentation{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
