@@ -46,3 +46,15 @@ h3{
     border: solid white 1px;
     background-color: #363434;
 }
+
+label{
+    color: #D0CFCF;
+}
+
+h4{
+    color: #D0CFCF;
+}
+
+.calculateurTrading{
+    background-color: rgb(53, 44, 44);
+}

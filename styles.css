@@ -293,8 +293,49 @@ header{
     width: fit-content;
 }
 
+/*Page de Trading 2*/
+.contenuTrading2{
+    margin-top: 40px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-/*Page trading 2*/
+
+.calculateurTrading{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 10px 20px;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+.calculateurTrading > .formDonneesCalculateur > form > .formCalculateurFields > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.affichageCalcul{
+    display: flex;
+    flex-direction: column;
+}
+.affichageCalcul > p{
+    width: fit-content;
+    margin: auto;
+}
+.affichageCalcul > h4{
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.calculateurButtons{
+    width: fit-content;
+    margin: auto;
+}
+/*Page minning 2*/
 albumTable {
 
     border-collapse: collapse; /* pour que toutes les cellules aient une seule bordure*/

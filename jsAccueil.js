@@ -1,5 +1,8 @@
 console.log()
 
+//elements permettants de passer du mode clair eu mode sombre,
+//Lorsque l'on passe en mode somnbre, en plus de charger la feuille de style originale
+//on charge la feuille de style stylesDark.css qui apporte les modification nécessaires
 var iconeColorChange = document.getElementById("iconeColorMode");
 
 var stylesSheetDark = document.getElementById("stylesDark");
@@ -19,26 +22,18 @@ function colorChange(){
     }
 }
 
-function startTime(){
-    const d = new Date();
-    var hours = d.getHours();
-    var min = d.getMinutes();
-    var sec = d.getSeconds();
-
-    var time = "il est " + hours + ':' + min + ':' + sec;
-
-    return time;
-}
 
 
 
 
-
+//Focntions permettants de gérer l'api et d'afficher les données fournies par un site 
+//dans le tableau de la page Minning 2
 var longueurTableau;
 var nombrePages;
 var pageActuelle = 1;
 var emplacementPageActuelleText = document.getElementById('nombrePages');
 
+//récupère le tableau des données fournises
 function getAlbum(){
     fetch("https://jsonplaceholder.typicode.com/albums/1/photos?_start=")
     .then((response) => response.json())
@@ -56,6 +51,7 @@ function getAlbum(){
     
 }
 
+//créée et insère une ligne de donnée dans le tableau affiché sur la page
 function createAlbum(album){
     const newLine = document.createElement('tr');
     const newSubLine1 = document.createElement('td');
@@ -82,7 +78,7 @@ function createAlbum(album){
 
 getAlbum();
 
-
+//supprime tous les éléments éffichés dans le tableau
 function removeAll(){
     let tableauVider = document.querySelector('.albumTableBody');
 
@@ -157,7 +153,7 @@ function insertAfter(newNode, referenceNode) {
 }
 
 //js pour ajout d'informations dans le tableau de la page manning
-var commandeForm = document.forms[0];
+var commandeForm = document.forms['commande'];
 
 function ajouter(){
 
@@ -196,3 +192,26 @@ const PUISSANCE_REQUIERED = "veuillez entrer une puissance Valide !";
 const GPU_REQUIERED   = "veuillez entrer un gpu existant";
 
 
+//fonctions pour récupérer les données du formulaire du calculateur et 
+//pour afficher le résultat de l'opération
+
+
+function calculer(){
+    var calculateurForm = document.forms[0];
+    //on va récupérer les informations rentrées dans le form
+    console.log(document.forms['calculateur'].prixAchat.value);
+    var prixAchat = calculateurForm.prixAchat.value;
+    var prixVente = calculateurForm.prixVente.value;
+    var qte = calculateurForm.qteEchangee.value;
+
+    var pnl = (prixVente - prixAchat) * qte;
+
+    var zoneAffihage = document.getElementById('resultatCalculateurTrading');
+    zoneAffihage.textContent = pnl;
+
+    if(pnl < 0){
+        zoneAffihage.style.color = 'red';
+    }else{
+        zoneAffihage.style.color = 'green';
+    }
+}

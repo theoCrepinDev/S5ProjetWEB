@@ -2,46 +2,68 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Site projet</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>CryptoGood</title>
+        <link rel="stylesheet" href="styles.css" >
         <link id="stylesDark" rel="stylesheet" href="">
     </head>
     <body>
-        <div class="header">
-            <header>
-                <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris" ></a>
-                <div class="menu_navigation">
-                    <nav class="menuNavigation">
-                        <ol>
-                            <!--Ligne supplémentaire--> 
-                            <li class="nonDeroulant"><a href="accueil.html">Accueil <p> </p></a></li>
-                            <li class="menuDeroulant">
-                                <a href="trading.html">Trading <p> ></p></a>
-                                <ul class="sousMenu">
-                                    <a href="trading.html">Trading 1</a>
-                                    <a href="trading1.html">Trading 2</a>
-                                </ul>   
-                            </li>
-                            <li class="menuDeroulant">
-                                <a href="minning.html" >Minning <p> ></p></a>
-                                <ul class="sousMenu">
-                                    <a href="minning.html">Minning 1</a>
-                                    <a href="minning2.html">Minning 2</a>
-                                </ul>  
-                            </li>
-                            <li class="nonDeroulant"><a href="contact.html">A propos <p> </p></a></li>
-                        </ol>
-                        
-                    </nav>
-                </div>
-                <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>
-            </header>
-        </div>
-  
-        <div class="contenuMinning2">
-            
-        </div>
-
+        <header>
+            <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris" ></a>
+            <div class="menu_navigation">
+                <nav class="menuNavigation">
+                    <ol>
+                        <!--Ligne supplémentaire--> 
+                        <li class="nonDeroulant"><a href="#">Accueil <p> </p></a></li>
+                        <li class="menuDeroulant">
+                            <a href="trading.html">Trading <p> ></p></a>
+                            <ul class="sousMenu">
+                                <a href="trading.html">Le Trading</a>
+                                <a href="trading1.html">Calculator</a>
+                            </ul>   
+                        </li>
+                        <li class="menuDeroulant">
+                            <a href="minning.html" >Minning <p> ></p></a>
+                            <ul class="sousMenu">
+                                <a href="minning.html">Le Minning</a>
+                                <a href="minning2.html">Les API</a>
+                            </ul>  
+                        </li>
+                        <li class="nonDeroulant"><a href="contact.html">A propos <p> </p></a></li>
+                    </ol>
+                    
+                </nav>
+            </div>
+            <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>
+        </header>
+        <div class="contenu">
+            <div id="album-table">
+                <h2 class="titre">Album</h2>
+        
+                <table id="albumTable">
+                    <thead>
+                        <tr>
+                            <th>PhotoId</th>
+                            <th>Id</th>
+                            <th>Titre</th>
+                            <th>URL1</th>
+                            <th>URL2</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody class="albumTableBody">
+        
+        
+                    </tbody>
+                </table>
+        
+                <nav class="precedentSuivant">
+                    <button class="prev nextPreviousButton" id="previousButton" type="button" onclick="getPreviousPage()">Page Précédent</button>
+                    <p id="nombrePages"></p>
+                    <button class="suiv nextPreviousButton" id="nextButton" type="butotn" onclick="getNextPage()">Page Suivante</button>
+                </nav>
+            </div>
+        </div>        
+    
         <script src="jsAccueil.js"></script>
     </body>
     <footer>
