@@ -2,68 +2,93 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>CryptoGood</title>
-        <link rel="stylesheet" href="styles.css" >
-        <link id="stylesDark" rel="stylesheet" href="">
+        <title>Site projet</title>
+        <link rel="stylesheet" href="styles.css">
+        <link id="stylesDark" rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris" ></a>
-            <div class="menu_navigation">
-                <nav class="menuNavigation">
-                    <ol>
-                        <!--Ligne supplémentaire--> 
-                        <li class="nonDeroulant"><a href="accueil.html">Acceuil <p> </p></a></li>
-                        <li class="menuDeroulant">
-                            <a href="trading.html">Trading <p> ></p></a>
-                            <ul class="sousMenu">
-                                <a href="trading.html">Trading 1</a>
-                                <a href="trading1.html">Trading 2</a>
-                            </ul>   
-                        </li>
-                        <li class="menuDeroulant">
-                            <a href="minning.html" >Minning <p> ></p></a>
-                            <ul class="sousMenu">
-                                <a href="minning.html">Minning 1</a>
-                                <a href="minning2.html">Minning 2</a>
-                            </ul>  
-                        </li>
-                        <li class="nonDeroulant"><a href="contact.html">Contact/A propos <p> </p></a></li>
-                    </ol>
-                    
-                </nav>
+        <div class="header">
+            <header>
+                <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris" ></a>
+                <div class="menu_navigation">
+                    <nav class="menuNavigation">
+                        <ol>
+                            <!--Ligne supplémentaire--> 
+                            <li class="nonDeroulant"><a href="#">Accueil <p> </p></a></li>
+                            <li class="menuDeroulant">
+                                <a href="trading.html">Trading <p> ></p></a>
+                                <ul class="sousMenu">
+                                    <li><a href="trading.html">Le Trading</a></li>
+                                    <li><a href="trading1.html">Calculator</a></li>
+                                </ul>   
+                            </li>
+                            <li class="menuDeroulant">
+                                <a href="minning.html" >Minning <p> ></p></a>
+                                <ul class="sousMenu">
+                                    <li><a href="minning.html">Le Minning</a></li>
+                                    <li><a href="minning2.html">Les API</a></li>
+                                    
+                                    
+                                </ul>  
+                            </li>
+                            <li class="nonDeroulant"><a href="contact.html">A propos <p> </p></a></li>
+                        </ol>
+                        
+                    </nav>
+                </div>
+                <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>
+            </header>
+        </div>
+  
+        <div class="contenuTrading2">
+            <div class="presentationCalculateur">
+                <p>Sur cette page vous pouvez utiliser cet outil pour calculer vos gains ou pertes lors d'un achat/vente de cryptomonnaies. <br>Pour ce faire, vous devez entrer 
+                    le prix d'achat en le prix de vente ainsi que la quantité échangée et vous aurez votre PNL (Profit And Loss) d'affichée.
+                </p>
             </div>
-            <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>
-        </header>
-        <div class="contenu">
-            <div id="album-table">
-                <h2 class="titre">Album</h2>
-        
-                <table id="albumTable">
-                    <thead>
-                        <tr>
-                            <th>PhotoId</th>
-                            <th>Id</th>
-                            <th>Titre</th>
-                            <th>URL1</th>
-                            <th>URL2</th>
-                        </tr>
-                    </thead>
-        
-                    <tbody class="albumTableBody">
-        
-        
-                    </tbody>
-                </table>
-        
-                <nav class="precedentSuivant">
-                    <button class="prev" id="previousButton" type="button" onclick="getPreviousPage()">Page Précédent</button>
-                    <p id="nombrePages"></p>
-                    <button class="suiv" id="nextButton" type="butotn" onclick="getNextPage()">Page Suivante</button>
-                </nav>
+            <div class="calculateurTrading">
+                <!-- Créer un calculateur de rentabilité sur une opération de trading-->
+                <div class="formDonneesCalculateur">
+                    <form name = "calculateur">
+                        <div class="formCalculateurFields">
+                            <div>
+                                <label for="prixAchat"><strong> Prix d'achat : </strong>  </label>
+                                <input type="number" id="prixAchat" name="prixAchat" placeholder="Prix d'Achat en €" required>
+                            </div>
+                            <div>
+                                <label for="prixVente"><strong> Prix de Vente : </strong></label>
+                                <input type="number" id="prixVente" name="prixVente" placeholder="Prix de Vente en €"  required>
+                            </div>
+                            <div>
+                                <label for="qteEchangee"><strong> Quantitée Echangée : </strong></label>
+                                <input type="number" id="qteEchangee" name="qteEchangee" placeholder="Quantitée échangée en unité"  required>
+                            </div>
+                        </div>
+                        <div class="affichageCalcul">
+                            <h4>Plus ou moins value de la transaction :</h4>
+                            <p> <span id="resultatCalculateurTrading" style="color: unset;">00.00</span>€</p>
+                            
+                        </div>
+                        <div class="calculateurButtons">
+                            <button type="submit" class="calculateurButton boutonPresentation"> Calculer </button>
+                        </div>
+                    </form>
+                    <script src="jsAccueil.js"></script>
+                    <script>
+                        var commandeForm = document.forms[0];
+            
+                        commandeForm.addEventListener("submit", function (event){
+                            event.preventDefault();
+                            calculer();
+                        });
+                    </script>
+                </div>
             </div>
-        </div>        
-    
-        <script src="jsAccueil.js"></script>
-    </body>
+        </div>
+    <footer>
+        <div class="footer">
+            <a class="lienAPropos boutonPresentation" href="contact.html" >Page à propos de l'équipe</a>
+        </div>
+    </footer>
+</body>
 </html>

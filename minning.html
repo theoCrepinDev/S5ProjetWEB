@@ -3,59 +3,55 @@
     <head>
         <meta charset="utf-8">
         <title>Site projet</title>
-        <link rel="stylesheet" href="stylesMinning.css">
-        <link id="stylesDark" rel="stylesheet" href="">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Bitter&family=EB+Garamond:wght@500&family=Source+Serif+Pro:wght@300&display=swap');
-        </style>
+        <link rel="stylesheet" href="styles.css">
+        <link id="stylesDark" rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris" ></a>
-            <div class="menu_navigation">
-                <nav class="menuNavigation">
-                    <ol>
-                        <!--Ligne supplémentaire--> 
-                        <li class="nonDeroulant"><a href="accueil.html">Acceuil <p> </p></a></li>
-                        <li class="menuDeroulant">
-                            <a href="trading.html">Trading <p> ></p></a>
-                            <ul class="sousMenu">
-                                <a href="trading.html">Trading 1</a>
-                                <a href="trading1.html">Trading 2</a>
-                            </ul>   
-                        </li>
-                        <li class="menuDeroulant">
-                            <a href="minning.html" >Minning <p> ></p></a>
-                            <ul class="sousMenu">
-                                <a href="minning.html">Minning 1</a>
-                                <a href="minning2.html">Minning 2</a>
-                            </ul>  
-                        </li>
-                        <li class="nonDeroulant"><a href="contact.html">Contact/A propos <p> </p></a></li>
-                    </ol>
-                    
-                </nav>
-            </div>
-            <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>
-        </header>
-        <h1> Le minage du Bitcoin </h1>
-        <div class="informations_minning">
-            <h2> Ce qu'il faut savoir sur le minning : </h2>
-            <p> À compléter</p>
-            
+        <div class="header">
+            <header>
+                <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris" ></a>
+                <div class="menu_navigation">
+                    <nav class="menuNavigation">
+                        <ol>
+                            <!--Ligne supplémentaire--> 
+                            <li class="nonDeroulant"><a href="#">Accueil <p> </p></a></li>
+                            <li class="menuDeroulant">
+                                <a href="trading.html">Trading <p> ></p></a>
+                                <ul class="sousMenu">
+                                    <li><a href="trading.html">Le Trading</a></li>
+                                    <li><a href="trading1.html">Calculator</a></li>
+                                </ul>   
+                            </li>
+                            <li class="menuDeroulant">
+                                <a href="minning.html" >Minning <p> ></p></a>
+                                <ul class="sousMenu">
+                                    <li><a href="minning.html">Le Minning</a></li>
+                                    <li><a href="minning2.html">Les API</a></li>
+                                    
+                                    
+                                </ul>  
+                            </li>
+                            <li class="nonDeroulant"><a href="contact.html">A propos <p> </p></a></li>
+                        </ol>
+                        
+                    </nav>
+                </div>
+                <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>
+            </header>
         </div>
-        <div class="table_minning" >
+  
+        <div class="contenuMinning">
             <h2> Les différents processeur permettant le minage : </h2>
             <table >
                 <tr>
                     <td class="col_1"><strong> Processeur </strong> </td>
-                    <th>Puissance</th>
                     <th>GPU</th>
+                    <th>Puissance</th>
                     
                 </tr>
-                <tbody class="bodyTableau">
+                <tbody id="bodyTableau">
                     <tr>
-                        <td rowspan="2" class="col_1">AMD</td>
+                        <td rowspan="2" class="col_1" id="colAmd">AMD</td>
                         <td class="recette_col">Radeon VII</td>
                         <td class="prix_col" >82 MH/s</td>
                     </tr>
@@ -63,8 +59,8 @@
                         <td class="recette_col">Radeon RX 6700 XT</td>
                         <td class="prix_col">50 MH/s</td>
                     </tr>
-                    <tr>
-                        <td rowspan="4" class="col_1">Nvidia</td>
+                    <tr id="familleNvidia"> 
+                        <td rowspan="4" class="col_1" id="colNvidia">Nvidia</td>
                         <td class="recette_col">GeForce RTX 2060</td>
                         <td class="prix_col">32MH/s</td>
                     </tr>
@@ -80,75 +76,55 @@
                         <td class="recette_col">GeForce RTX 2080 Super</td>
                         <td class="prix_col">42MH/s</td>
                     </tr>
+                    <tr id="familleFin" style="display: none;">
+                        <td rowspan="1" class="col_1" id="colFin" style="display: none;">fin</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                     
                 </tbody>
             </table>
-        </div>
+        
         <h2> Ajouter des nouvelles informations : </h2>
         <form name ="commande">
-            <div>
-                <label for="processeur"><strong> Processeur : </strong>  </label>
-                <input type="text" id="processeur" name="processeur" placeholder="Nouveau processeur" size="50" required>
+            <div class="formFields">
+                <div>
+                    <label for="processeur"><strong> Processeur : </strong>  </label>
+                    <select id="processeur" name="processeur" size="1">
+                        <option value="amd"> Famille AMD</option>
+                        <option value="nvidia"> Famille Nvidia</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="gpu"><strong> GPU : </strong></label>
+                    <input type="text" id="gpu" name="gpu" placeholder="Son GPU" size="50" required>
+                </div>
+                <div>
+                    <label for="puissance"><strong> Puissance : </strong></label>
+                    <input type="number" id="puissance" name="puissance" placeholder="Sa puissance en MH/s" required>
+                </div>
             </div>
-            <div>
-                <label for="puissance"><strong> Puissance : </strong></label>
-                <input type="text" id="puissance" name="puissance" placeholder="Sa puissance" size="50" required>
-            </div>
-            <div>
-                <label for="gpu"><strong> GPU : </strong></label>
-                <input type="text" id="gpu" name="gpu" placeholder="Son GPU" size="50" required>
-            </div>
-            <div>
-                <button type="submit"> Ajouter </button>
-                <button type="reset"> Supprimer </button>
+            
+            
+            <div class="formButtons">
+                <button type="submit" class="formButton boutonPresentation"> Ajouter </button>
+                <button type="reset" class="formButton boutonPresentation"> Supprimer </button>
             </div>
         </form>
-        
-
-        <footer>
-        </footer>
-    </body>
-    <script src="jsAccueil.js"></script>
-</html>
-
-<script>
-    console.log();
-    
+    </div>
+        <script  src="jsAccueil.js"></script>
+        <script>
             var commandeForm = document.forms[0];
 
-            function ajouter(){
-                console.log(commandeForm.processeur.value);
-                console.log(commandeForm.puissance.value);
-                console.log(commandeForm.gpu.value);
-
-                //on créé un nouvel élément
-                var newLine = document.createElement("tr");
-                var newVal1 = document.createElement("td");
-                var newVal2 = document.createElement("td");
-                var newVal3 = document.createElement("td");
-
-                newVal1.textContent = commandeForm.processeur.value;
-                newVal2.textContent = commandeForm.puissance.value;
-                newVal3.textContent = commandeForm.gpu.value;
-
-                newLine.append(newVal1);
-                newLine.append(newVal2);
-                newLine.append(newVal3);
-
-
-                var bodyTableau = document.querySelector(".bodyTableau");
-                bodyTableau.appendChild(newLine);
-
-            }
-
-
-            const PROCESSEUR_REQUIERED = "veuillez entrer le bon processeur !";
-            const PUISSANCE_REQUIERED = "veuillez entrer une puissance Valide !";
-            const GPU_REQUIERED   = "veuillez entrer un gpu existant";
-
-
-          commandeForm.addEventListener("submit", function (event){
-            event.preventDefault();
-            ajouter();
-});
-</script>
+            commandeForm.addEventListener("submit", function (event){
+                event.preventDefault();
+                ajouter();
+            });
+        </script>
+    <footer>
+        <div class="footer">
+            <a class="lienAPropos boutonPresentation" href="contact.html" >Page à propos de l'équipe</a>
+        </div>
+    </footer>
+</body>
+</html>
