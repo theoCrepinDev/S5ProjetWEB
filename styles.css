@@ -89,7 +89,7 @@ header{
     
 }
 
-.sousMenu > a{
+.sousMenu >li > a{
     opacity: 0;
     transition: opacity 0.4s;
 }
@@ -118,7 +118,7 @@ header{
     
 }
 
-.menuDeroulant:hover  > .sousMenu >a{
+.menuDeroulant:hover  > .sousMenu >li>a{
     opacity: 1;
 }
 
@@ -145,11 +145,14 @@ header{
     font-size: large;
 }
 
-.sousMenu > a{
+.sousMenu > li>  a{
     text-decoration: none;
     text-transform: uppercase;
     color: black;
     
+}
+.sousMenu > li{
+    list-style-type: none;
 }
 
 /*banière accueil*/

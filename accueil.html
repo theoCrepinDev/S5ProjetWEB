@@ -4,37 +4,41 @@
         <meta charset="utf-8">
         <title>CryptoGood</title>
         <link rel="stylesheet" href="styles.css" >
-        <link id="stylesDark" rel="stylesheet" href="">
+        <link id="stylesDark" rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris" ></a>
-            <div class="menu_navigation">
-                <nav class="menuNavigation">
-                    <ol>
-                        <!--Ligne supplémentaire--> 
-                        <li class="nonDeroulant"><a href="#">Accueil <p> </p></a></li>
-                        <li class="menuDeroulant">
-                            <a href="trading.html">Trading <p> ></p></a>
-                            <ul class="sousMenu">
-                                <a href="trading.html">Le Trading</a>
-                                <a href="trading1.html">Calculator</a>
-                            </ul>   
-                        </li>
-                        <li class="menuDeroulant">
-                            <a href="minning.html" >Minning <p> ></p></a>
-                            <ul class="sousMenu">
-                                <a href="minning.html">Le Minning</a>
-                                <a href="minning2.html">Les API</a>
-                            </ul>  
-                        </li>
-                        <li class="nonDeroulant"><a href="contact.html">A propos <p> </p></a></li>
-                    </ol>
-                    
-                </nav>
-            </div>
-            <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>
-        </header>
+        <div class="header">
+            <header>
+                <a href="accueil.html"><img id="logo_site" src="images/logo.png" alt="Logo EFREI Paris" ></a>
+                <div class="menu_navigation">
+                    <nav class="menuNavigation">
+                        <ol>
+                            <!--Ligne supplémentaire--> 
+                            <li class="nonDeroulant"><a href="#">Accueil <p> </p></a></li>
+                            <li class="menuDeroulant">
+                                <a href="trading.html">Trading <p> ></p></a>
+                                <ul class="sousMenu">
+                                    <li><a href="trading.html">Le Trading</a></li>
+                                    <li><a href="trading1.html">Calculator</a></li>
+                                </ul>   
+                            </li>
+                            <li class="menuDeroulant">
+                                <a href="minning.html" >Minning <p> ></p></a>
+                                <ul class="sousMenu">
+                                    <li><a href="minning.html">Le Minning</a></li>
+                                    <li><a href="minning2.html">Les API</a></li>
+                                    
+                                    
+                                </ul>  
+                            </li>
+                            <li class="nonDeroulant"><a href="contact.html">A propos <p> </p></a></li>
+                        </ol>
+                        
+                    </nav>
+                </div>
+                <button id="btnColorChange" onclick="colorChange()"><img id="iconeColorMode" src="images/iconeModeNuit.png" alt="Icone cahngement de mode"></button>
+            </header>
+        </div>
         <div class="contenu">
             <section id="banniere">
                 <div class="titreBaniere">
@@ -94,10 +98,11 @@
         </div>        
     
         <script src="jsAccueil.js"></script>
-    </body>
+    
     <footer>
         <div class="footer">
             <a class="lienAPropos boutonPresentation" href="contact.html" >Page à propos de l'équipe</a>
         </div>
     </footer>
+</body>
 </html>
